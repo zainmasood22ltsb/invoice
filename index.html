@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Invoice Generator</h1>
+    <form id="invoiceForm">
+      <label for="invoiceNumber">Invoice Number:</label>
+      <input type="text" id="invoiceNumber" required>
+      
+      <label for="date">Date:</label>
+      <input type="date" id="date" required>
+
+      <h3>Items</h3>
+      <div id="itemsContainer">
+        <div class="item">
+          <input type="text" placeholder="Item Name" class="item-name">
+          <input type="number" placeholder="Quantity" class="item-quantity">
+          <input type="number" placeholder="Price" class="item-price">
+          <button type="button" class="remove-item">Remove</button>
+        </div>
+      </div>
+      <button type="button" id="addItem">Add Item</button>
+
+      <h3>Summary</h3>
+      <p>Total: $<span id="totalAmount">0.00</span></p>
+      <p>Tax (10%): $<span id="taxAmount">0.00</span></p>
+      <p><strong>Grand Total: $<span id="grandTotal">0.00</span></strong></p>
+
+      <button type="submit">Generate Invoice</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
